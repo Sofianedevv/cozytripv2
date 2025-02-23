@@ -1,0 +1,16 @@
+ # Points d'entrée à tester pour XSS
+
+## Formulaires
+- Formulaire de contact
+- Formulaire de commentaires
+- Champ de recherche
+
+## Paramètres URL
+- /hebergements?search=[PAYLOAD]
+- /hebergement/[PAYLOAD]
+- /categorie/[PAYLOAD]
+
+## Entrées utilisateur
+- Commentaires
+- Messages de contact
+- Noms d'utilisateur affichés

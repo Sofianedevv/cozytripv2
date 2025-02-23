@@ -1,0 +1,15 @@
+headers:
+  - X-Frame-Options: DENY
+  - X-Content-Type-Options: nosniff
+  - Content-Security-Policy: "default-src 'self'"
+  - X-XSS-Protection: "1; mode=block"
+
+form_security:
+  - csrf_protection: true
+  - input_validation: true
+  - output_escaping: true
+
+database:
+  - prepared_statements: true
+  - parameterized_queries: true
+  - minimal_privileges: true 

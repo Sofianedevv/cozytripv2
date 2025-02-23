@@ -1,0 +1,17 @@
+GET http://localhost:8000/
+Accept: text/html
+
+GET http://localhost:8000/hebergements
+Accept: text/html
+
+GET http://localhost:8000/contact
+Accept: text/html
+
+GET http://localhost:8000/mention
+Accept: text/html
+
+GET http://localhost:8000/hebergement_1
+Accept: text/html
+
+GET http://localhost:8000/hebergement/categorie/villa
+Accept: text/html 

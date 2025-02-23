@@ -1,0 +1,11 @@
+# Points d'entrée à tester
+http://localhost:8000/hebergements?search=[PAYLOAD]
+http://localhost:8000/hebergement/[PAYLOAD]
+http://localhost:8000/hebergement/categorie/[PAYLOAD]
+http://localhost:8000/contact (formulaire)
+
+# Paramètres sensibles
+- Champs de recherche
+- IDs dans les URLs
+- Formulaires de contact
+- Commentaires 

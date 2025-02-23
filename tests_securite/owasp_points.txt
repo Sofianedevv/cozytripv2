@@ -1,0 +1,36 @@
+ # Configuration des tests OWASP ZAP pour CozyTrip
+
+## URLs à tester
+http://localhost:8000/
+http://localhost:8000/hebergements
+http://localhost:8000/contact
+http://localhost:8000/login
+http://localhost:8000/register
+
+## Formulaires sensibles
+- Connexion
+- Inscription
+- Contact
+- Recherche
+- Commentaires
+
+## Tests de sécurité
+1. Injection
+   - SQL
+   - XSS
+   - Command injection
+
+2. Authentification
+   - Brute force
+   - Session fixation
+   - Password policies
+
+3. Gestion des données
+   - CSRF protection
+   - Secure cookies
+   - Data validation
+
+4. Configuration
+   - SSL/TLS
+   - Security headers
+   - Error handling

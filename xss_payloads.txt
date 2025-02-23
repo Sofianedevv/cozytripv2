@@ -1,0 +1,11 @@
+// Test basique
+<script>alert('XSS')</script>
+
+// Test avec encodage
+javascript:alert(1)
+
+// Test dans les attributs
+" onmouseover="alert(1)
+
+// Test dans les commentaires
+--><script>alert(1)</script> 

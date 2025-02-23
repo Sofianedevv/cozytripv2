@@ -1,0 +1,1 @@
+http://localhost:8000/hebergement/categorie/villa (GET)  # C:\Users\Sofia\Downloads\Cozytrip-master\tests_securite\sqlmap\sqlmap.py -u http://localhost:8000/hebergement/categorie/villa --batch --random-agent --dbms=mysql --output-dir=./sqlmap_results --level=3

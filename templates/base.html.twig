@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Protection XSS et sécurité -->
+        <meta http-equiv="Content-Security-Policy" content="
+            default-src 'self';
+            script-src 'self' {% if csp_nonce is defined %}'nonce-{{ csp_nonce }}'{% endif %} https://www.googletagmanager.com https://cdn.jsdelivr.net;
+            style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+            img-src 'self' data: https:;
+            font-src 'self' https://fonts.gstatic.com;
+            frame-ancestors 'none';
+        ">
+        <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+        <meta charset="UTF-8">
+        <title>{% block title %}Locations d'hébergements{% endblock %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Trouvez des hébergements uniques à des prix incroyables. CozyTrip : Votre refuge douillet, réservé en un instant !">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+        {# <link href= "{{asset('css/styleSimplex.min.css')}}" rel ="stylesheet"> #}
+
+       
+       <link rel="icon" type="image/png" sizes="32x32" href="/favicon/logoo.png" alt="icone">
+       
+
+
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+       <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+       <link href= "{{asset('css/index.css')}}" rel ="stylesheet">
+       <link href= "{{asset('css/allhebergement.css')}}" rel ="stylesheet">
+       <link href= "{{asset('css/onehebergement.css')}}" rel ="stylesheet">
+       <link href= "{{asset('css/layout.css')}}" rel ="stylesheet">
+       <link href= "{{asset('css/footer.css')}}" rel ="stylesheet">
+       <link href= "{{asset('css/mesreservations.css')}}" rel ="stylesheet">
+       <link href= "{{asset('css/ajouthebergement.css')}}" rel ="stylesheet">
+       <link href= "{{asset('css/monprofil.css')}}" rel ="stylesheet">
+       <link href= "{{asset('css/commentaire.css')}}" rel ="stylesheet">
+
+
+
+
+        {% endblock %}
+
+    </head>
+    <body>
+    <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCR2W77F"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        {% block body %}
+
+
+
+        {% endblock %}
+    {% block javascripts %}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+  <script {% if csp_nonce is defined %}nonce="{{ csp_nonce }}"{% endif %}>         
+       const barreHamburger = document.querySelector(".barre-hamburger")
+       const menuLinks = document.querySelector(".menu-links")
+       barreHamburger.addEventListener('click',()=>{
+       menuLinks.classList.toggle('mobile-menu')
+       })
+  </script>
+
+
+        {% endblock %}
+        
+     
+   
+    </body>      
+
+        
+    
+</html>
+
+
+
+
